@@ -27,7 +27,7 @@ const Presentation:React.FC = () => {
         </p>
         <div className={Style.presentation__cont}>
         <Link className={Style.presentation__cbutton} to={"/projects"}  title="Descubrir los proyectos">Descubrir los proyectos</Link>
-        <Link className={Style.presentation__cibutton} to={"mailto: josepgb13@gmail.com"}  title="Descubrir los proyectos">Descubrir los proyectos</Link>
+        <Link className={Style.presentation__cibutton} to={"mailto: josepgb13@gmail.com"}  title="Enviar e-mail">Enviar correo electrónico</Link>
 
         </div>
       </div>
