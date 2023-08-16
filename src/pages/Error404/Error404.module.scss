@@ -1,0 +1,17 @@
+.error{
+    height: 75dvh;
+    width: auto;
+    background-image:  url('../../assets/404.webp');
+    background-position: center/80%;
+    &__title{
+        font-size: 2em;    
+        color: red;
+        padding-top: 2em;
+        padding-left: 1em;
+    }
+    &__subtitle{
+        font-size: 1.5em;
+        padding-left: 1.75em;
+
+    }
+}

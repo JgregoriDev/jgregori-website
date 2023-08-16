@@ -1,5 +1,5 @@
 import "@/App.scss";
-import About from "@/pages/About";
+import {Error404} from "@/pages/Error404/index.tsx";
 import Blog from "@/pages/Blog";
 import Home from "@/pages/Home";
 import Projects from "@/pages/Projects";
@@ -10,11 +10,7 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    // path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/projects",
+    path: "/proyectos",
     element: <Projects />,
   },
   {
@@ -23,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <About />,
+    element: <Error404 />,
   },
 ]);
 function App() {

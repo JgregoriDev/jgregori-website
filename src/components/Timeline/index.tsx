@@ -21,9 +21,9 @@ const timeLineData=[
      Una para enviar los pagos por correo electrónico  y otra para controlar entradas y salidas de los trabajadores del ayuntamiento.
      </li>
      <li>Gestión y uso de bases de datos MySQL</li>
-     <li>Configuración e instalación de dispositivos Ubiquiti poe</li>
+     <li>Configuración e instalación de dispositivos Ubiquiti poe, Ubiquiti mesh</li>
      <li>Configuración de distintos routers</li>
-     <li>Gestión de impresoras través de la red</li>
+     <li>Gestión de impresoras a través de la red</li>
      <li>Acoplamiento de cables rj-45</li>
      <li>Uso de servidor linux con Apache, DNS server, Samba,Webmin</li>
      <li>Creación de página wordpress, html, css y javascript</li>
