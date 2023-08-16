@@ -1,0 +1,36 @@
+import useProjects from '@/hooks/useProjects';
+import { modelsProject } from '@/models/project';
+import Style from "./ListProjects.module.scss";
+import { Card } from '@/components/Card';
+export const ListProjects = () => {
+  const {projects,genres} = useProjects();
+ 
+  
+  return (
+    <div className={Style.container}>
+      <h2 className={Style.title}>Proyectos</h2>
+      <div className={Style.container}>
+        {/* form */}
+        <form className={Style.form} action="" method="post">
+
+        <select className={Style.form__filter} name="" id="">
+          <option defaultValue={`all`}>all</option>
+
+          {[...genres].map((genre) => (
+            <option>{genre}</option>
+            ))}
+        </select>
+        <input className={Style.form__text} type="search" name="" id="" placeholder='Buscar proyecto' />
+        </form>
+        {/* end form */}
+      </div>
+      <section className={Style.section}>
+        {projects && [...projects].map((project:modelsProject)=>{
+          return (
+            <Card key={project.id} {...project} />
+          )
+        })}
+      </section>
+    </div>
+  )
+}

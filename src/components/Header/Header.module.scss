@@ -1,0 +1,62 @@
+@use "@/styles/colors.scss" as *;
+.header{
+    display: flex;
+    min-height: 9.375em;
+    max-height: 20em;
+    flex-direction: column;
+    &__container{
+        text-decoration: none;
+        color: map-get($map: $light-theme-colors, $key: primary);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__container:hover,&__container:visited{
+        color: map-get($map: $light-theme-colors, $key: primary--hover);
+        
+    }
+    &__title{
+        padding-left: 0.625em;
+    }
+    &__logo{
+
+    }
+    &__nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 1.25em;
+    }
+    &__link{
+        min-width: 9.375em;
+        text-decoration: none;
+        color: map-get($map: $light-theme-colors, $key: primary);
+    }
+    &__link--active{
+        text-decoration: none;
+        min-width: 9.375em;
+
+        color: map-get($map: $dark-theme-colors, $key: secondary);
+    }
+ 
+    @media screen and (min-width: 720px) {
+        flex-direction: row;
+        &__container{
+            flex-direction: row;
+        }
+        &__nav{
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        
+    }
+
+    @media screen and (min-width: 1080px) {
+      
+        
+    }
+
+}

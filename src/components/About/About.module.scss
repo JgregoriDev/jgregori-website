@@ -1,0 +1,21 @@
+@use "@/styles/mixins" as *;
+.container{
+    @include grid(1,1em);
+    gap: 2em;
+    &__row{
+        @include flex(row,start,center);
+        gap: 1em;
+        min-height: 2.8125em;
+    }
+    &__par{
+        line-height: 1.75em;
+    }
+    @media screen and (min-width:768px) {
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    @media screen and (min-width:1024px) {
+        grid-template-columns: repeat(3,1fr);
+        
+    }
+}

@@ -1,0 +1,35 @@
+@use "@/styles/mixins" as *;
+.form{
+    @include flex(row,center,center);
+    gap: .5em;
+    &__filter{
+        width: 50%;
+    }
+    &__text{
+        width: 50%;
+    }
+    @media screen and (min-width: 768px) {
+        gap: 1em;
+        
+    }
+
+    @media screen and (min-width: 1024px) {
+        gap: 2em;
+        
+    }
+}
+
+.section{
+    margin-top: 2em;
+    place-content: center;
+    @include grid(1,1em);
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+
+    @media screen and (min-width: 1024px) {
+       grid-template-columns: repeat(3,1fr);
+        
+    }
+}

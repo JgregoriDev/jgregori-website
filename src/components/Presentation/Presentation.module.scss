@@ -1,0 +1,109 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/colors" as *;
+.presentation {
+  $width: 80%;
+  min-height: 57.8125em;
+
+  //   display: none;
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  &__title {
+    font-size: 2.5rem;
+  }
+  &__span {
+    display: block;
+  }
+  &__paragraph {
+    line-height: 1.75em;
+    font-style: 1.25em;
+    margin-bottom: 2.25em;
+  }
+  &__cimage {
+    height: auto;
+    padding: 2.5em 0em;
+    margin: 0 calc((100% - 80%) / 2);
+    width: 80%;
+  }
+  &__img {
+    transition: border-radius 1s ease;
+    border-radius: 50%;
+    // aspect-ratio: 4/3;
+    object-fit: contain;
+
+    width: 100%;
+    filter: grayscale(25%);
+    height: auto;
+  }
+  &__cbutton {
+    background-color: map-get($map: $light-theme-colors, $key: primary);
+    text-decoration: none;
+    padding: 1em;
+    border: 10px transparent;
+    border-radius: 15px;
+    color: rgba(255, 255, 255, 0.514);
+    margin-top: 2em;
+  }
+  &__cbutton:hover {
+    background-color: map-get($map: $light-theme-colors, $key: primary--hover);
+  }
+  &__btn {
+    background-color: map-get($map: $light-theme-colors, $key: primary);
+    color: white;
+
+    font-weight: bolder;
+    margin: 2em 0em;
+    width: 2.25em;
+    padding: 1em;
+    text-decoration: none;
+  }
+  &__btn:focus{
+    background-color: map-get($map: $light-theme-colors, $key: primary--hover);
+
+  }
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    min-height: 23.4375em;
+    &__cbutton{
+      min-width: 12.5em;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 2em;
+    // justify-content: center;
+
+    &__title {
+      font-size: 2.5rem;
+    }
+    &__span {
+      display: block;
+    }
+    &__paragraph {
+    }
+    &__cimage {
+      height: auto;
+      padding: 0;
+      width: 40%;
+    }
+    &__img {
+      border-radius: 50%;
+      width: 100%;
+      filter: grayscale(25%);
+      height: auto;
+    }
+    &__btn {
+      background-color: map-get($map: $light-theme-colors, $key: primary);
+      color: white;
+      padding-left: 2em;
+      font-weight: bolder;
+      height: 4em;
+      width: 2.25em;
+      padding: 1em;
+      text-decoration: none;
+    }
+    &__btn:hover {
+      background-color: map-get($map: $light-theme-colors, $key: primary--hover);
+      // color: white;;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use "@/styles/mixins" as *;
+.footer {
+  width: 100vw;
+  height: minmax(12.25vh, 225px);
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: black;
+  color: white;
+  &__ch2 {
+    // width: 70%;
+  }
+  &__h2 {
+  }
+  &__cup {
+    // width: 30%;
+  }
+  &_up {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  @media screen and (min-width: 768px) {
+    
+    
+    display: flex;
+    &__ch2 {
+      padding-left: 5.5em;
+      // width: 70%;
+    }
+    &__h2 {
+    }
+    &__cup {
+      // width: 30%;
+    }
+    &_up {
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    &__ch2 {
+      padding-left: 5.5em;
+      width: 70%;
+      min-height: 2em;
+    }
+    &__h2 {
+      margin: 0;
+    }
+    &__cup {
+      width: 30%;
+    }
+    &__up {
+      background-color: transparent;
+      border: transparent;
+      cursor: pointer;
+      color: white;
+    }
+  }
+}

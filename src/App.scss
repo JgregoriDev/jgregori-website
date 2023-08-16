@@ -1,0 +1,8 @@
+@use "@/styles/normalize.scss" as *;
+@font-face {
+    src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
+    font-family: "Roboto",Verdana,Tahoma;
+}
+body{
+    font-family: "Roboto",Verdana,Tahoma;
+}

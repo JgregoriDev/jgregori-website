@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Alazlibros",
+      "description": "Proyecto simple de maquetación de Alazlibros",
+      "link": "https://github.com/jgregoridev/alazlibros/",
+      "technologies": ["HTML5", "CSS3", "JavaScript"],
+      "photos": {
+        "url": "https://github.com/jgregoridev/alazlibros/blob/main/src/images/logo_website.png?raw=true",
+        "description": "Captura de pantalla del proyecto 1"
+      },
+      "github": "https://github.com/jgregoridev/alazlibros",
+      "url": "http://jgregoridev.github.io/alazlibros"
+    },
+    {
+      "id": 2,
+      "name": "Pokedex",
+      "description": "Pokedex en la que podras listar todos los pokemons de primera genertación",
+      "link": "https://jgregoridev.github.io/pokedex/",
+      "technologies": ["React", "CSS3"],
+      "photos": {
+        "url": "https://github.com/jgregoridev/pokedex/blob/main/src/assets/pokeball.png?raw=true",
+        "description": "Captura de pantalla del proyecto 2"
+      },
+      "github": "https://github.com/jgregoridev/pokedex",
+      "url": "http://jgregoridev.github.io/pokedex"
+    },
+    {
+      "id": 3,
+      "name": "VOS- Videogame Oliva Shop",
+      "description": "Ecommerce con su carro de la compra, cobro con la pasarela de pago  stripe",
+      "link": "https://11josep.daw.iesevalorpego.es/",
+      "technologies": [
+        "PHP",
+        "MySQL",
+        "Symfony",
+        "JavaScript",
+        "bootstrap",
+        "react",
+        "CSS3"
+      ],
+      "photos": {
+        "url": "https://raw.githubusercontent.com/jgregoridev/VOS/2c819efcd79a336c092ea11d70a848d7dd8e22b4/Frontend/src/assets/images/icon64x64-transformed.png",
+        "description": "Captura de pantalla del proyecto 3"
+      },
+      "github": "https://github.com/jgregoridev/VOS",
+      "url": "https://11josep.daw.iesevalorpego.es/"
+    },
+    {
+      "id": 4,
+      "name": "Password generator",
+      "description": "Generador de contraseñas experimentando con el api del clipboard",
+      "link": "https://11josep.daw.iesevalorpego.es/",
+      "technologies": ["React", "SASS", "JavaScript"],
+      "photos": {
+        "url": "https://raw.githubusercontent.com/jgregoridev/VOS/2c819efcd79a336c092ea11d70a848d7dd8e22b4/Frontend/src/assets/images/icon64x64-transformed.png",
+        "description": "Captura de pantalla del proyecto 4"
+      },
+      "github": "https://github.com/JgregoriDev/pass-generator/",
+      "url": "https://jgregoridev.github.io/pass-generator//"
+    }
+  ]
+}

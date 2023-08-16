@@ -1,0 +1,30 @@
+@use "@/styles/mixins" as *;
+
+.container{
+    width: 100vw;
+    position: relative;
+    
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        &__aside{
+            flex: 1;
+            display: inline-block;
+            width: 20dvw;
+        }
+        &__main{
+            position: relative;
+            display: inline-block;
+            width: 60dvw;
+        }
+        &__lside{
+            flex: 1;
+            display: inline-block;
+            width: 20dvw;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+       
+    }
+        
+}
