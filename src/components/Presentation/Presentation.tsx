@@ -1,4 +1,4 @@
-import img from "@assets/jgregori.webp";
+import img from "@assets/jgregori.png";
 import Style from "./Presentation.module.scss";
 import { Link } from 'react-router-dom'
 
@@ -23,7 +23,7 @@ const Presentation:React.FC = () => {
         <p className={Style.presentation__paragraph}>
           Me encanta  enfrentar nuevos desafíos y aportar soluciones en el
           mundo del desarrollo web. Como desarrollador full stack, mi objetivo
-          es aportar soluciones, estar a la vanguardia,aplicar lo aprendido y crecer de una manera segura. 
+          es ser la mejor version de yo mismo, ser mejor programador que el día de ayer aprendiendo de manera diaria cosas nuevas y crecer de una manera segura. 
         </p>
         <div className={Style.presentation__cont}>
         <Link className={Style.presentation__cbutton} to={"/projects"}  title="Descubrir los proyectos">Descubrir los proyectos</Link>
