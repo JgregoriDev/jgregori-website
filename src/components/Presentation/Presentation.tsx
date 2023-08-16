@@ -23,7 +23,7 @@ const Presentation:React.FC = () => {
         <p className={Style.presentation__paragraph}>
           Me encanta  enfrentar nuevos desafíos y aportar soluciones en el
           mundo del desarrollo web. Como desarrollador full stack, mi objetivo
-          es aprender nuevas tecnologías, aplicar lo aprendido y crecer de una manera segura. 
+          es aportar soluciones, estar a la vanguardia,aplicar lo aprendido y crecer de una manera segura. 
         </p>
         <div className={Style.presentation__cont}>
         <Link className={Style.presentation__cbutton} to={"/projects"}  title="Descubrir los proyectos">Descubrir los proyectos</Link>
