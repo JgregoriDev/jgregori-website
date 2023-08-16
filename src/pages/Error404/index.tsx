@@ -1,4 +1,3 @@
-import React from 'react'
 import Template from '../Template';
 import Style from "./Error404.module.scss"
 

@@ -1,4 +1,4 @@
-import img from "@assets/jgregori.webp";
+import img from "@assets/jgregori.png";
 import Style from "./Presentation.module.scss";
 import { Link } from 'react-router-dom'
 
