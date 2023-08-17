@@ -5,6 +5,7 @@ import { Card } from "@/components/Card";
 export const ListProjects = () => {
   const { projects, genres, filterProjectsByCategory, searchProjectByName } =
     useProjects();
+  const isProjectsValid = projects;
 
   const onChangeGenre = (genre: string) => {
     filterProjectsByCategory(genre);
@@ -44,10 +45,13 @@ export const ListProjects = () => {
         {/* end form */}
       </div>
       <section className={Style.section}>
-        {projects &&
+        {isProjectsValid && projects.length === 0 ? (
+          <h3>No hay proyectos validos con estos filtros</h3>
+        ) : (
           [...projects].map((project: modelsProject) => {
             return <Card key={project.id} {...project} />;
-          })}
+          })
+        )}
       </section>
     </div>
   );
