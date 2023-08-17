@@ -32,8 +32,13 @@
     object-fit: contain;
 
     width: 100%;
-    filter: grayscale(25%);
+    filter: grayscale(100%);
     height: auto;
+    transition: filter 1s ease;
+  }
+  &__img:hover {
+    filter: grayscale(0);
+ 
   }
   &__cbutton {
     background-color: map-get($map: $light-theme-colors, $key: primary);
@@ -89,7 +94,7 @@
     }
     &__cont{
       margin: 0;
-      padding: 0;
+      padding: 1em 0;
       flex-direction: row;
     }
   }
@@ -131,4 +136,8 @@
       // color: white;;
     }
   }
+}
+
+.par{
+  line-height: 2em;
 }
