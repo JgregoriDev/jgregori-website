@@ -74,10 +74,10 @@ export const Card = (project: modelsProject) => {
             </svg>
           </a>
         </div>
-        <div className={Style.container_cspans}>
+        <div className={Style.container__cspans}>
 
           {technologies.map((technology) => (
-            <span key={technology} className={Style.card__tag}>{technology}</span>
+            <span key={technology} className={Style.container__tag}>{technology}</span>
             ))}
             </div>
       </div>

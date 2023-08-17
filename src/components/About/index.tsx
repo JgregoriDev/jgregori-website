@@ -3,6 +3,11 @@ const About = () => {
   return (
     <section>
       <h2>Sobre mí</h2>
+      <p className={Style.par}>Como desarrollador full stack trato de mejorar en las diferentes areas del desarrollo web me gustan mucho las interfaces minimalistas 
+        ya que considero menos es mas. Mis areas de interés en el desarrollo web son la parte de la lógica de negocio y la presentación de datos. Tengo conocimientos
+        en el backend con PHP y symfony como framework y en el frontend con HTML5, CSS3, SASS, Bootstrap y JavaScript. He hecho diferentes proyectos de los cuales
+        me he ocupado de la lógica de negocio y la integración con la base de datos correspondiente.
+      </p>
       <div className={Style.container}>
         <div >
           <div className={Style.container__row}>

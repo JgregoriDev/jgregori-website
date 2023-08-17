@@ -1,46 +1,64 @@
-import {useState,useEffect} from 'react'
-import {projects as ProjectJson} from "@assets/db/Projects.json";
-import { modelsProject } from '@/models/project';
+import { useState, useEffect } from "react";
+import { projects as ProjectJson } from "@assets/db/Projects.json";
+import { modelsProject } from "@/models/project";
 
-const getGenres = async (projects:modelsProject[]):Promise<Set<string>> => {
-    const genres = new Set<string>();
-    projects.forEach((project) => {
-      project.technologies.forEach((technology) => {
-        genres.add(technology);
-      });
+const getGenres = async (): Promise<Set<string>> => {
+  const genres = new Set<string>();
+  ProjectJson.forEach((project) => {
+    project.technologies.forEach((technology) => {
+      genres.add(technology);
     });
-    return genres;
+  });
+  return genres;
 };
 
 const useProjects = () => {
-    const [projects,] = useState(ProjectJson);
-    const [genres, setGenres] = useState<Set<string>>(new Set<string>());
+  const [projects, setProjects] = useState(ProjectJson);
+  const [genres, setGenres] = useState<Set<string>>(new Set<string>());
 
-    useEffect(() => {
-        getGenres(projects)
-        .then((result) => {
-            setGenres(result);
-        }).catch((err) => {
-            console.error(err);
-            
-        });
-         
-    },[projects])
-    
-    // useEffect(() => {
-    //     filterProjects('react');
-    // }, [])
-    
-    // const filterProjects = (filter: string|null=null,) => {
-    //     const proj=[...projects].filter((project) => {
-    //         return project.technologies.includes(filter);
-    //     })
-    // }
+  useEffect(() => {
+    getGenres()
+      .then((result) => {
+        setGenres(result);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
 
-    return {
-        projects,genres
-    };
+  // useEffect(() => {
+  //     filterProjects('react');
+  // }, [])
 
-}
+  const filterProjectsByCategory = (filter: string) => {
+    if (filter === "all") {
+      setProjects(ProjectJson);
+      return;
+    }
+    const proj = [...ProjectJson].filter((project) => {
+      return project.technologies.includes(filter);
+    });
 
-export default useProjects
+    setProjects(proj);
+  };
+  const searchProjectByName = (filter: string) => {
+    if (filter === "") {
+      setProjects(ProjectJson);
+      return;
+    }
+    const proj = [...ProjectJson].filter((project) => {
+      return project.name.toLowerCase().includes(filter);
+    });
+
+    setProjects(proj);
+  };
+
+  return {
+    projects,
+    genres,
+    filterProjectsByCategory,
+    searchProjectByName
+  };
+};
+
+export default useProjects;
