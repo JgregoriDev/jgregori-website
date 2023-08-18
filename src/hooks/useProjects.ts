@@ -38,14 +38,18 @@ const filterProjectsByCategory = (filter: string) => {
   const proj = ProjectJson.filter((project) => project.technologies.includes(filter));
   
   setProjects(proj);
-  return proj;
 };
 const searchProjectByName = (filter: string) => {
-  const proj = filter === "" 
+  const filterHelper=filter.trim();
+  if (filter === "" ) {
+    setProjects(ProjectJson);
+    return;
+  }
+  const proj = filterHelper === "" 
     ? ProjectJson 
     : ProjectJson.filter(project => project.name.toLowerCase().includes(filter));
 
-  console.log(proj);
+  
   setProjects(proj);
   return proj;
 };
