@@ -1,5 +1,6 @@
 import Style from "./Footer.module.scss";
 const Footer = () => {
+  
   const scrollToTop = () => {
     
     window.scrollTo({ top: 0, behavior: "smooth" });

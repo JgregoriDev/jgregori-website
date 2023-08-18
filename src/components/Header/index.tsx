@@ -12,7 +12,7 @@ const Header: React.FC = () => {
             src={logo}
             alt="jgregoridev page"
           />
-          <h1 className={Style.header__title}>jgregoridev</h1>
+          <h1 className={Style.header__title}>JGregoriDev</h1>
         </NavLink>
       </div>
       <nav className={Style.header__nav}>
