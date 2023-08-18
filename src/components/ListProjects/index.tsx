@@ -2,6 +2,8 @@ import useProjects from "@/hooks/useProjects";
 import { modelsProject } from "@/models/project";
 import Style from "./ListProjects.module.scss";
 import { Card } from "@/components/Card";
+import { Link } from "react-router-dom";
+
 export const ListProjects = () => {
   const { projects, genres, filterProjectsByCategory, searchProjectByName } =
     useProjects();
@@ -18,7 +20,13 @@ export const ListProjects = () => {
       <h2 className={Style.title}>Proyectos</h2>
       <div className={Style.container}>
         {/* form */}
-        <form onSubmit={(e)=>{e.preventDefault()}} className={Style.form} method="post">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+          className={Style.form}
+          method="post"
+        >
           <select
             className={Style.form__filter}
             onChange={(e) => {
@@ -53,6 +61,16 @@ export const ListProjects = () => {
           })
         )}
       </section>
+      <div className="container--link">
+        <Link
+          to={"https://github.com/JgregoriDev?tab=repositories"}
+          target="_blank"
+          title="Ver más proyectos en github"
+          className={`container--link__primary`}
+        >
+          Más proyectos
+        </Link>
+      </div>
     </div>
   );
 };

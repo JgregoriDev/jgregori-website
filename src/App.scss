@@ -1,8 +1,26 @@
 @use "@/styles/normalize.scss" as *;
+@use "@/styles/colors.scss" as *;
 @font-face {
     src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
     font-family: "Roboto",Verdana,Tahoma;
 }
 body{
     font-family: "Roboto",Verdana,Tahoma;
+}
+
+.container--link{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    &__primary{
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        color: map-get($map: $light-theme-colors, $key: primary);
+        margin-bottom: 1em;
+        margin-left: 1em;
+    }
+    &__primary:hover,&__primary:visited{
+        color: map-get($map: $light-theme-colors, $key: secondary);
+    }
 }
