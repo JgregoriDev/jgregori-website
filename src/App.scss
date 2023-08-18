@@ -5,6 +5,7 @@
     font-family: "Roboto",Verdana,Tahoma;
 }
 body{
+    accent-color: map-get($map: $light-theme-colors, $key: primary);
     font-family: "Roboto",Verdana,Tahoma;
 }
 

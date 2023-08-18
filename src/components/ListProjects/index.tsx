@@ -35,7 +35,7 @@ export const ListProjects = () => {
             name=""
             id=""
           >
-            <option defaultValue={`all`}>all</option>
+            <option defaultValue={`all`}>Todos</option>
 
             {[...genres].map((genre) => (
               <option>{genre}</option>

@@ -26,7 +26,7 @@ const Presentation:React.FC = () => {
           es ser la mejor version de yo mismo, ser mejor programador que el día de ayer aprendiendo de manera diaria cosas nuevas y crecer de una manera segura. 
         </p>
         <div className={Style.presentation__cont}>
-        <Link className={Style.presentation__cbutton} to={"/projects"}  title="Descubrir los proyectos">Descubrir los proyectos</Link>
+        <Link className={Style.presentation__cbutton} to={"/proyectos"}  title="Descubrir los proyectos">Descubrir los proyectos</Link>
         <Link className={Style.presentation__cibutton} to={"mailto: josepgb13@gmail.com"}  title="Enviar e-mail">Enviar correo electrónico</Link>
 
         </div>

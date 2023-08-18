@@ -1,5 +1,7 @@
 import { modelsProject } from "@/models/project";
 import Style from "./Card.module.scss";
+import { Link } from 'react-router-dom'
+
 export const Card = (project: modelsProject) => {
   const {
     name,
@@ -22,9 +24,9 @@ export const Card = (project: modelsProject) => {
       <div className={Style.card__overlay}>
         <p className={Style.card__description}>{description2}</p>
         <div className={Style.container}>
-          <a
+          <Link
             className={Style.card__link}
-            href={url}
+            to={url}
             title="Ir al proyecto"
             target="_blank"
             rel="noreferrer"
@@ -45,10 +47,11 @@ export const Card = (project: modelsProject) => {
               <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
               <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"></path>
             </svg>
-          </a>
-          <a
-            className={Style.card__link}
-            href={github}
+          </Link>
+          <Link
+            className={` ${github ? Style.card__github : Style.card__hide}`}
+            style={{}}
+            to={github ?? ""}
             title="Ver código en github"
             target="_blank"
             rel="noreferrer"
@@ -72,7 +75,7 @@ export const Card = (project: modelsProject) => {
                 fill="currentColor"
               ></path>
             </svg>
-          </a>
+          </Link>
         </div>
         <div className={Style.container__cspans}>
 
