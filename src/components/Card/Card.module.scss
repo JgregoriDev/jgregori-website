@@ -3,6 +3,7 @@
 .card{
     position: relative;
     @include flex(column,center,center);
+    min-height: 300px;
     border: 1px solid map-get($map: $light-theme-colors, $key: secondary);
     
     &__title{
@@ -25,7 +26,9 @@
             display: none;
             background: rgba(0,0,0,.6);
     }
-   
+    &__hide{
+        visibility: hidden;
+    }
     // &__cspans{
     //     @include flex(row,space-evenly,center);
     //     flex-wrap: wrap;

@@ -26,7 +26,7 @@ const Header: React.FC = () => {
           }
           to="/"
         >
-          Home
+          Inicio
         </NavLink>
         {/* <NavLink   className={
             ({ isActive, isPending }) =>

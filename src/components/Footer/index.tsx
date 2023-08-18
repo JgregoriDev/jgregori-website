@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className={Style.footer}>
       <div className={Style.footer__ch2}>
-        <h2 className={Style.footer__h2}>Footer</h2>
+        <h2 className={Style.footer__h2}>JGregoriDev</h2>
       </div>
       <div className={Style.footer__cup}>
         <button onClick={()=>scrollToTop()} className={Style.footer__up} title="Volver al principio de la pagina">
