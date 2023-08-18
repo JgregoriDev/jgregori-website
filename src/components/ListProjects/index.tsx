@@ -18,7 +18,7 @@ export const ListProjects = () => {
       <h2 className={Style.title}>Proyectos</h2>
       <div className={Style.container}>
         {/* form */}
-        <form className={Style.form} action="" method="post">
+        <form onSubmit={(e)=>{e.preventDefault()}} className={Style.form} method="post">
           <select
             className={Style.form__filter}
             onChange={(e) => {

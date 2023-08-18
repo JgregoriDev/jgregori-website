@@ -46,6 +46,7 @@ const searchProjectByName = (filter: string) => {
     : ProjectJson.filter(project => project.name.toLowerCase().includes(filter));
 
   console.log(proj);
+  setProjects(proj);
   return proj;
 };
 
