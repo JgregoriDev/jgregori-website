@@ -37,7 +37,7 @@
         "Symfony",
         "JavaScript",
         "bootstrap",
-        "react",
+        "React",
         "CSS3"
       ],
       "photos": {
@@ -52,7 +52,7 @@
       "name": "Password generator",
       "description": "Generador de contraseñas experimentando con el api del clipboard",
       "link": "https://11josep.daw.iesevalorpego.es/",
-      "technologies": ["React", "SASS", "JavaScript"],
+      "technologies": ["CSS3", "React", "SASS", "JavaScript"],
       "photos": {
         "url": "https://raw.githubusercontent.com/jgregoridev/VOS/2c819efcd79a336c092ea11d70a848d7dd8e22b4/Frontend/src/assets/images/icon64x64-transformed.png",
         "description": "Captura de pantalla del proyecto 4"

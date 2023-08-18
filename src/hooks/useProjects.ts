@@ -41,13 +41,10 @@ const filterProjectsByCategory = (filter: string) => {
 };
 const searchProjectByName = (filter: string) => {
   const filterHelper=filter.trim();
-  if (filter === "" ) {
-    setProjects(ProjectJson);
-    return;
-  }
+
   const proj = filterHelper === "" 
     ? ProjectJson 
-    : ProjectJson.filter(project => project.name.toLowerCase().includes(filter));
+    : 
 
   
   setProjects(proj);
