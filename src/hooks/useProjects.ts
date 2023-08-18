@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { projects as ProjectJson } from "@assets/db/Projects.json";
-import { modelsProject } from "@/models/project";
 
 const getGenres = async (): Promise<Set<string>> => {
   const genres = new Set<string>();
@@ -30,28 +29,25 @@ const useProjects = () => {
   //     filterProjects('react');
   // }, [])
 
-  const filterProjectsByCategory = (filter: string) => {
-    if (filter === "all") {
-      setProjects(ProjectJson);
-      return;
-    }
-    const proj = [...ProjectJson].filter((project) => {
-      return project.technologies.includes(filter);
-    });
+const filterProjectsByCategory = (filter: string) => {
+  if (filter === "all") {
+    setProjects(ProjectJson);
+    return;
+  }
+  
+  const proj = ProjectJson.filter((project) => project.technologies.includes(filter));
+  
+  setProjects(proj);
+  return proj;
+};
+const searchProjectByName = (filter: string) => {
+  const proj = filter === "" 
+    ? ProjectJson 
+    : ProjectJson.filter(project => project.name.toLowerCase().includes(filter));
 
-    setProjects(proj);
-  };
-  const searchProjectByName = (filter: string) => {
-    if (filter === "") {
-      setProjects(ProjectJson);
-      return;
-    }
-    const proj = [...ProjectJson].filter((project) => {
-      return project.name.toLowerCase().includes(filter);
-    });
-
-    setProjects(proj);
-  };
+  console.log(proj);
+  return proj;
+};
 
   return {
     projects,
