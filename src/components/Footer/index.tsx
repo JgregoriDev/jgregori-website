@@ -10,7 +10,7 @@ const Footer = () => {
         <h2 className={Style.footer__h2}>JGregoriDev</h2>
       </div>
       <div className={Style.footer__cup}>
-        <button onClick={()=>scrollToTop()} className={Style.footer__up} title="Volver al principio de la pagina">
+        <button onClick={()=>scrollToTop()} className={Style.footer__up} title="Volver al principio de la página">
           <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-narrow-up" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M12 5l0 14"></path>
